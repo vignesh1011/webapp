@@ -19,3 +19,9 @@ task createWar(type : War){
     classifier = "SNAPSHOT"
     from "src"
 }
+javadoc {
+	title = 'Web app'
+	options.links = ['http://docs.oracle.com/javase/6/docs/api/']
+	options.header = "Documention for version ${project.version}"
+	options.footer = "Generated on ${new Date().format('dd MM yyyy')}"
+}
