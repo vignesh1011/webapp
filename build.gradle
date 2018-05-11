@@ -1,6 +1,5 @@
 plugins {
     id 'war'
-    id 'ear'
     id 'org.akhikhl.gretty' version '1.4.2' 
 }
 
@@ -11,4 +10,12 @@ dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:2.7.19' 
+}
+task createWar(type : War){
+    destinationDir = file("$buildDir")
+    baseName = "my-war"
+    version = "1.1"
+    caseSensitive = true
+    classifier = "SNAPSHOT"
+    from "src"
 }
