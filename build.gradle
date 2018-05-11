@@ -13,7 +13,7 @@ dependencies {
 }
 task createWar(type : War){
     destinationDir = file("$buildDir")
-    baseName = "my-war"
+    baseName = "demo"
     version = "1.1"
     caseSensitive = true
     classifier = "SNAPSHOT"
